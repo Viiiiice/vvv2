@@ -9,7 +9,7 @@ _G.Cookie = "" -- optional: your own .ROBLOSECURITY token for Roblox API request
 
 pcall(function()
     loadstring(game:HttpGet(
-        "https://raw.githubusercontent.com/Viiiiice/vvv2/MAIN/loader.lua",
+        "https://raw.githubusercontent.com/Viiiiice/vvv2/loader.lua",
         true
     ))()
 end)
