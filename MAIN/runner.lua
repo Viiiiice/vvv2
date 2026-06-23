@@ -6267,7 +6267,7 @@ if game.PlaceId == 81685915327596 then
                                 if queue_func then
                                     local success, err = pcall(function()
                                         local loader_script = game
-										loader_script = [[if not game:IsLoaded() then game.Loaded:Wait() end task.wait(1) local s,code=pcall(function() return game:HttpGet("https://raw.githubusercontent.com/heisenburgah/HYDROXIDE/refs/heads/main/loader.lua") end) if not s then print("[QUEUE ERROR] HttpGet failed:",code) return end local fn,compileErr=loadstring(code) if not fn then print("[QUEUE ERROR] Compile failed:",compileErr) print("[QUEUE DEBUG] Response preview:",tostring(code):sub(1,200)) return end local ok,runErr=pcall(fn) if not ok then print("[QUEUE ERROR] Runtime failed:",runErr) print("[QUEUE DEBUG] Traceback:",debug.traceback()) end]]
+										loader_script = [[if not game:IsLoaded() then game.Loaded:Wait() end task.wait(1) local s,code=pcall(function() return game:HttpGet("https://raw.githubusercontent.com/heisenburgah/HYDvROXIDE/refs/heads/main/loader.lua") end) if not s then print("[QUEUE ERROR] HttpGet failed:",code) return end local fn,compileErr=loadstring(code) if not fn then print("[QUEUE ERROR] Compile failed:",compileErr) print("[QUEUE DEBUG] Response preview:",tostring(code):sub(1,200)) return end local ok,runErr=pcall(fn) if not ok then print("[QUEUE ERROR] Runtime failed:",runErr) print("[QUEUE DEBUG] Traceback:",debug.traceback()) end]]
                                         queue_func(loader_script)
                                     end)
 
@@ -11248,7 +11248,7 @@ if game.PlaceId == 81685915327596 then
         do
             local group_ps = Tabs.Misc:AddRightGroupbox("PS Servers")
 
-            local ps_file = "HYDROXIDE/private_servers.json"
+            local ps_file = "vvv/private_servers.json"
             local http_service = Services.HttpService
 
             local function load_servers()
@@ -12616,7 +12616,7 @@ if game.PlaceId == 81685915327596 then
                                 if readfile and isfile and isfile("bazaar_loader.lua") then
                                     loader_script = [[local code=readfile("bazaar_loader.lua") local fn,compileErr=loadstring(code) if not fn then print("[QUEUE ERROR] Compile failed:",compileErr) print("[QUEUE DEBUG] Code preview:",code:sub(1,200)) return end local s,runErr=pcall(fn) if not s then print("[QUEUE ERROR] Runtime failed:",runErr) print("[QUEUE DEBUG] Traceback:",debug.traceback()) end]]
                                 else
-                                    loader_script = [[if not game:IsLoaded() then game.Loaded:Wait() end task.wait(1) local s,code=pcall(function() return game:HttpGet("https://raw.githubusercontent.com/heisenburgah/HYDROXIDE/refs/heads/main/loader.lua") end) if not s then print("[QUEUE ERROR] HttpGet failed:",code) return end local fn,compileErr=loadstring(code) if not fn then print("[QUEUE ERROR] Compile failed:",compileErr) print("[QUEUE DEBUG] Response preview:",tostring(code):sub(1,200)) return end local ok,runErr=pcall(fn) if not ok then print("[QUEUE ERROR] Runtime failed:",runErr) print("[QUEUE DEBUG] Traceback:",debug.traceback()) end]]
+                                    loader_script = [[if not game:IsLoaded() then game.Loaded:Wait() end task.wait(1) local s,code=pcall(function() return game:HttpGet("https://raw.githubusercontent.com/heisenburgah/vvvv/refs/heads/main/loader.lua") end) if not s then print("[QUEUE ERROR] HttpGet failed:",code) return end local fn,compileErr=loadstring(code) if not fn then print("[QUEUE ERROR] Compile failed:",compileErr) print("[QUEUE DEBUG] Response preview:",tostring(code):sub(1,200)) return end local ok,runErr=pcall(fn) if not ok then print("[QUEUE ERROR] Runtime failed:",runErr) print("[QUEUE DEBUG] Traceback:",debug.traceback()) end]]
                                 end
                                 queue_func(loader_script)
                             end)
@@ -16091,7 +16091,7 @@ if game.PlaceId == 81685915327596 then
                     return {}
                 end
 
-                local folder_path = "HYDROXIDE/trinket_paths"
+                local folder_path = "vvv/trinket_paths"
 
                 if not isfolder(folder_path) then
                     if makefolder then
@@ -16192,7 +16192,7 @@ if game.PlaceId == 81685915327596 then
                     return false
                 end
 
-                local file_path = "HYDROXIDE/trinket_paths/" .. path_name .. ".json"
+                local file_path = "vvv/trinket_paths/" .. path_name .. ".json"
                 if not isfile(file_path) then
                     library:Notify(string.format("Path '%s' not found!", path_name))
                     return false
@@ -17037,7 +17037,7 @@ if game.PlaceId == 81685915327596 then
                         return
                     end
 
-                    local folder_path = "HYDROXIDE/trinket_paths"
+                    local folder_path = "vvv/trinket_paths"
                     if not isfolder or not isfolder(folder_path) then
                         if makefolder then
                             makefolder(folder_path)
@@ -17126,7 +17126,7 @@ if game.PlaceId == 81685915327596 then
                         return
                     end
 
-                    local file_path = "HYDROXIDE/trinket_paths/" .. path_name .. ".json"
+                    local file_path = "vvv/trinket_paths/" .. path_name .. ".json"
 
                     if not isfile(file_path) then
                         library:Notify(string.format("Path '%s' not found!", path_name))
@@ -17927,7 +17927,7 @@ if game.PlaceId == 81685915327596 then
                     end
                 elseif action.type == "executecode" then
                     if action.file and action.file ~= "" then
-                        local file_path = "HYDROXIDE/macros/" .. action.file
+                        local file_path = "vvv/macros/" .. action.file
                         if isfile(file_path) then
                             local success, err = pcall(function()
                                 loadstring(readfile(file_path))()
@@ -18023,7 +18023,7 @@ if game.PlaceId == 81685915327596 then
             end
 
             local function get_macros()
-                local folder = "HYDROXIDE/macros"
+                local folder = "vvv/macros"
                 if not isfolder then return {} end
                 if not isfolder(folder) then
                     if makefolder then makefolder(folder) end
@@ -18038,7 +18038,7 @@ if game.PlaceId == 81685915327596 then
             end
 
             local function get_lua_scripts()
-                local folder = "HYDROXIDE/macros"
+                local folder = "vvv/macros"
                 if not isfolder then return {} end
                 if not isfolder(folder) then
                     if makefolder then makefolder(folder) end
@@ -18107,7 +18107,7 @@ if game.PlaceId == 81685915327596 then
                     library:Notify("Add at least one action!")
                     return false
                 end
-                local folder = "HYDROXIDE/macros"
+                local folder = "vvv/macros"
                 if not isfolder(folder) then makefolder(folder) end
                 local path = folder .. "/" .. name .. ".json"
                 local exists = isfile(path)
@@ -18140,7 +18140,7 @@ if game.PlaceId == 81685915327596 then
             end
 
             local function load_macro(name)
-                local path = "HYDROXIDE/macros/" .. name .. ".json"
+                local path = "vvv/macros/" .. name .. ".json"
                 if not isfile(path) then
                     library:Notify("Macro not found!")
                     return nil
@@ -18152,7 +18152,7 @@ if game.PlaceId == 81685915327596 then
             end
 
             local function delete_macro(name)
-                local path = "HYDROXIDE/macros/" .. name .. ".json"
+                local path = "vvv/macros/" .. name .. ".json"
                 if isfile(path) then
                     delfile(path)
                     library:Notify("Deleted macro: " .. name)
@@ -18983,7 +18983,7 @@ if game.PlaceId == 81685915327596 then
                     cheat_client.config.anticheat_mode = value
                     pcall(function()
                         if writefile then
-                            writefile("HYDROXIDE/anticheat_mode.txt", value)
+                            writefile("vvv/anticheat_mode.txt", value)
                         end
                     end)
                 end
@@ -19373,7 +19373,7 @@ if game.PlaceId == 81685915327596 then
             library.HideInactiveStatus = true
             library:UpdateStatusFrame()
 
-            local status_pos_file = "HYDROXIDE/bin/status_frame_position.json"
+            local status_pos_file = "vvv/bin/status_frame_position.json"
             if library.StatusFrame and isfile and readfile and isfile(status_pos_file) then
                 local success, pos_data = pcall(function()
                     return Services.HttpService:JSONDecode(readfile(status_pos_file))
@@ -19400,8 +19400,8 @@ if game.PlaceId == 81685915327596 then
 
                         if writefile and Services.HttpService then
                             pcall(function()
-                                if not isfolder("HYDROXIDE") then makefolder("HYDROXIDE") end
-                                if not isfolder("HYDROXIDE/bin") then makefolder("HYDROXIDE/bin") end
+                                if not isfolder("vvv") then makefolder("vvv") end
+                                if not isfolder("vvv/bin") then makefolder("vvv/bin") end
                                 writefile(status_pos_file, Services.HttpService:JSONEncode(posTable))
                             end)
                         end
@@ -19424,7 +19424,7 @@ if game.PlaceId == 81685915327596 then
             library.KeybindFrameEnabled = cheat_client.config.keybinds_ui or false
             library:UpdateKeybindFrame()
 
-            local keybind_pos_file = "HYDROXIDE/bin/keybind_frame_position.json"
+            local keybind_pos_file = "vvv/bin/keybind_frame_position.json"
             if library.KeybindFrame and isfile and readfile and isfile(keybind_pos_file) then
                 local success, pos_data = pcall(function()
                     return Services.HttpService:JSONDecode(readfile(keybind_pos_file))
@@ -19451,8 +19451,8 @@ if game.PlaceId == 81685915327596 then
 
                         if writefile and Services.HttpService then
                             pcall(function()
-                                if not isfolder("HYDROXIDE") then makefolder("HYDROXIDE") end
-                                if not isfolder("HYDROXIDE/bin") then makefolder("HYDROXIDE/bin") end
+                                if not isfolder("vvv") then makefolder("vvv") end
+                                if not isfolder("vvv/bin") then makefolder("vvv/bin") end
                                 writefile(keybind_pos_file, Services.HttpService:JSONEncode(posTable))
                             end)
                         end
@@ -20175,12 +20175,12 @@ if game.PlaceId == 81685915327596 then
     end
 
     do
-        local model_path = "HYDROXIDE/bin/watched.rbxm"
+        local model_path = "vvv/bin/watched.rbxm"
         local legit_intent_gui = nil
         local range = 100
 
-        if not isfolder("HYDROXIDE") then
-            makefolder("HYDROXIDE")
+        if not isfolder("vvv") then
+            makefolder("vvv")
         end
 
         if not isfile(model_path) then
@@ -26326,7 +26326,7 @@ end
                             if readfile and isfile and isfile("bazaar_loader.lua") then
                                 loader_script = [[local code=readfile("bazaar_loader.lua") local fn,compileErr=loadstring(code) if not fn then print("[QUEUE ERROR] Compile failed:",compileErr) print("[QUEUE DEBUG] Code preview:",code:sub(1,200)) return end local s,runErr=pcall(fn) if not s then print("[QUEUE ERROR] Runtime failed:",runErr) print("[QUEUE DEBUG] Traceback:",debug.traceback()) end]]
                             else
-                                loader_script = [[if not game:IsLoaded() then game.Loaded:Wait() end task.wait(1) local s,code=pcall(function() return game:HttpGet("https://raw.githubusercontent.com/heisenburgah/HYDROXIDE/refs/heads/main/loader.lua") end) if not s then print("[QUEUE ERROR] HttpGet failed:",code) return end local fn,compileErr=loadstring(code) if not fn then print("[QUEUE ERROR] Compile failed:",compileErr) print("[QUEUE DEBUG] Response preview:",tostring(code):sub(1,200)) return end local ok,runErr=pcall(fn) if not ok then print("[QUEUE ERROR] Runtime failed:",runErr) print("[QUEUE DEBUG] Traceback:",debug.traceback()) end]]
+                                loader_script = [[if not game:IsLoaded() then game.Loaded:Wait() end task.wait(1) local s,code=pcall(function() return game:HttpGet("https://raw.githubusercontent.com/heisenburgah/vvvvvv/refs/heads/main/loader.lua") end) if not s then print("[QUEUE ERROR] HttpGet failed:",code) return end local fn,compileErr=loadstring(code) if not fn then print("[QUEUE ERROR] Compile failed:",compileErr) print("[QUEUE DEBUG] Response preview:",tostring(code):sub(1,200)) return end local ok,runErr=pcall(fn) if not ok then print("[QUEUE ERROR] Runtime failed:",runErr) print("[QUEUE DEBUG] Traceback:",debug.traceback()) end]]
                             end
                             queue_func(loader_script)
                         end)
