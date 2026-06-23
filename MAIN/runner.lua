@@ -77,6 +77,8 @@ end
 
 local key = generate_key()
 if game.PlaceId == 81685915327596 then
+    warn("WE GOT IN THIS PLACE?")
+
     if getgenv()[key] and type(getgenv()[key]) == "table" then return end
     getgenv()[key] = setmetatable({}, { __tostring = function() return "nil" end })
 
