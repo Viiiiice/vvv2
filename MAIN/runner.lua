@@ -81,3 +81,5 @@ local key = generate_key()
 if game.PlaceId == 81685915327596 then
     warn("WE ARE IN THE PLACE")
 end
+
+warn("successfully ran?")
