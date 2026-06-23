@@ -7,4 +7,6 @@ if gameId == 2309918273 or gameId == 10129349136 then
             true
         ))()
     end)
+
+    warn('loader ran')
 end
