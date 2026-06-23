@@ -1,3 +1,5 @@
+warn("running the runner")
+
 if not game:IsLoaded() then
     game.Loaded:Wait()
 end
