@@ -36,7 +36,7 @@ end
 
 local ThemeManager = {}
 do
-    ThemeManager.Folder = "HYDROXIDELib"
+    ThemeManager.Folder = "vvvLib"
     -- if not isfolder(ThemeManager.Folder) then makefolder(ThemeManager.Folder) end
 
     ThemeManager.Library = nil
