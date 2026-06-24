@@ -15,7 +15,6 @@ local getgenv = getgenv or function()
 end
 
 local setclipboard = setclipboard or nil
-local protectgui = protectgui or (syn and syn.protect_gui) or function() end
 local gethui = gethui or function()
     return CoreGui
 end
@@ -1174,7 +1173,7 @@ local function ParentUI(UI: Instance, SkipHiddenUI: boolean?)
         return
     end
 
-    pcall(protectgui, UI)
+    pcall(gethui, UI)
     SafeParentUI(UI, gethui)
 end
 
