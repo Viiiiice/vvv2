@@ -13,7 +13,6 @@ local TweenService: TweenService = cloneref(game:GetService("TweenService"))
 local getgenv = getgenv or function()
     return shared
 end
-
 local setclipboard = setclipboard or nil
 local gethui = gethui or function()
     return CoreGui
@@ -1173,7 +1172,6 @@ local function ParentUI(UI: Instance, SkipHiddenUI: boolean?)
         return
     end
 
-    pcall(gethui, UI)
     SafeParentUI(UI, gethui)
 end
 
@@ -7156,6 +7154,7 @@ local function OnPlayerChange()
         end
     end
 end
+
 local function OnTeamChange()
     local TeamList = GetTeams()
 
